@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Batch#21</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 1200px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 2.5em;
+	max-height: 2.5em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 40vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c1d7dcd5-f2c8-4214-8d9e-99e95acf0de3" class="page mono"><header><img class="page-cover-image" src="./src/cover.png" style="object-position:center 19.259999999999998%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="./src/icon.png"/></div><h1 class="page-title">Batch#21</h1></header><div class="page-body"><hr id="a87f854c-c9d6-4a3f-9c0e-be6641849af1"/><h1 id="fed4fa87-21e7-4a94-b6e3-cb1acda463be" class=""># <span style="border-bottom:0.05em solid">About Me</span></h1><div id="d824d7ae-8739-4f93-ac1d-ac435309e5ea" class="column-list"><div id="d26083c9-f4ee-4b7d-88fa-a430b0f71b95" style="width:20.833333333333332%" class="column"><figure id="65dc60d7-198d-48a9-8175-7d23222a16fe" class="image" style="text-align:center"><a href="Batch#21%20c1d7dcd5f2c842148d9e99e95acf0de3/Untitled1.png"><img style="width:240px" src="./src/selfie.png"/></a></figure><p id="720f8cf2-0d8f-4f25-9054-764c62e8d980" class="">
+</p></div><div id="d195f157-e5da-4793-9894-a186b0b8aade" style="width:74.99999999999994%" class="column"><p id="c6712a74-92fe-4289-b8fe-ecc9404e407a" class="">🙋‍♂️ <code>Name</code><strong>     </strong><div class="indented"><p id="178063d1-40bf-4ef7-9b13-a9f0728978c9" class="">邱景煥 Eddie Ciou                            </p></div></p><p id="93efceb3-0bf0-48db-850f-9ef975defbb2" class="">📧 <code>Email</code> <strong>   </strong><div class="indented"><p id="ea2084e2-98f3-4c3f-b1c5-106e809246ec" class="">huanciou@gmail.com    <strong>              </strong></p></div></p><p id="47a441d7-4c2e-40e9-90e6-1d3f401168e2" class="">🧭 <code>Location</code><div class="indented"><p id="247549c6-15e6-42ed-acb0-0af7aa789315" class="">New Taipei City, Taiwan</p></div></p><p id="a4957420-cc64-4002-9fc3-baa1c2bef6a4" class="">🔗 <code>Website</code><strong> </strong><div class="indented"><p id="7d80248a-22ee-410e-aa86-7f498fe46a12" class=""><span style="border-bottom:0.05em solid"><a href="https://huanciou.github.io/">https://huanciou.github.io</a></span></p></div></p></div><div id="14810b8b-e2c1-49b7-aa5c-64492ec7aaf8" style="width:4.166666666666666%" class="column"><p id="1f59fe84-8318-4e46-857d-1fb88b76d96a" class="">
+</p></div></div><hr id="5f8ef038-652d-4e62-bb1c-35a26f73a37d"/><h1 id="aabb923b-f657-4924-8235-6dbb16718ae9" class=""># <span style="border-bottom:0.05em solid">Education</span></h1><figure id="b51e43dd-63bf-4288-b925-ba6f500921da" class="image"><a href="Batch#21%20c1d7dcd5f2c842148d9e99e95acf0de3/Untitled.png"><img style="width:108px" src="./src/logo.png"/></a></figure><figure id="4d1fc1f0-affc-4ae7-97c5-65789e74ddc1" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="1.44em"><mtext mathvariant="monospace">國</mtext><mtext>立臺灣大學</mtext><mtext>  </mtext><mtext>農業化學系 就讀中</mtext><mspace linebreak="newline"></mspace><mstyle mathsize="1em"><mrow><mtext mathvariant="monospace">畢業年份</mtext><mtext> </mtext><mtext mathvariant="monospace">～</mtext><mtext> </mtext><mtext mathvariant="monospace">2023/06</mtext></mrow></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\Large \texttt 國立臺灣大學\;農業化學系\ 就讀中\\ \normalsize \texttt{畢業年份 ～ 2023/06}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9839952em;vertical-align:0em;"></span><span class="mord text sizing reset-size6 size8"><span class="mord texttt cjk_fallback">國</span></span><span class="mord cjk_fallback sizing reset-size6 size8">立臺灣大學</span><span class="mspace sizing reset-size6 size8" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback sizing reset-size6 size8">農業化學系</span><span class="mspace sizing reset-size6 size8"> </span><span class="mord cjk_fallback sizing reset-size6 size8">就讀中</span></span><span class="mspace newline sizing reset-size6 size8"></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord text sizing reset-size6 size6"><span class="mord texttt cjk_fallback">畢業年份</span><span class="mord texttt"> </span><span class="mord texttt cjk_fallback">～</span><span class="mord texttt"> 2023/06</span></span></span></span></span></span></div></figure><hr id="6f0ebbb5-030f-4340-8c23-9119a35c68dc"/><h1 id="79c4fa22-1a33-4f86-87f8-c84d9dc4b94d" class=""># <span style="border-bottom:0.05em solid">Course</span></h1><div id="8c02577d-2b22-41e6-a346-b0f9ac11c3f2" class="column-list"><div id="6b29361e-3d7b-4940-8137-f76bd5a0c533" style="width:3.125%" class="column"><p id="9b1698e9-6a21-40ea-b8c6-8ee15ade477d" class="">
+</p></div><div id="c907b32d-db5f-42fd-b313-53952fdc9c62" style="width:50%" class="column"><blockquote id="da06eee1-6a33-401c-8c28-9ce0c4806a04" class="">Course(NTU)<ul id="279a60ac-b2ee-4d1e-a6ea-ff96516f9782" class="toggle"><li><details open=""><summary>109-2</summary><ul id="ff20c7ab-66f1-43ad-8372-605b0ecb9a4b" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">計算機概論 <a href="https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=901%2010110&amp;class=&amp;dpt_code=9010&amp;ser_no=46324&amp;semester=109-2&amp;lang=CH"><code>&lt;陳銘憲 老師&gt;</code></a></span></li></ul><ul id="4c089bcd-18ce-494c-bb39-cdd23e6988bd" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">計算機程式設計 <a href="https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=901%2033920&amp;class=&amp;dpt_code=0000&amp;ser_no=28470&amp;semester=109-2&amp;lang=CH"><code>&lt;鄭士康 老師&gt;</code></a></span></li></ul></details></li></ul><ul id="54edc296-e468-4118-8d20-30847656543d" class="toggle"><li><details open=""><summary>111-1</summary><ul id="f9c99873-df7d-498a-8f03-cf62b68af10f" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">C/C++程式設計 <a href="https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=902%2048150&amp;class=&amp;dpt_code=0000&amp;ser_no=18338&amp;semester=111-1&amp;lang=CH"><code>&lt;張傑帆 老師&gt;</code></a></span></li></ul></details></li></ul><ul id="7cdf2f0d-55cc-4a2e-8189-fc44a82e35ff" class="toggle"><li><details open=""><summary>111-2</summary><ul id="d375af6a-019a-47de-9db2-baf90b418ad2" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">資料結構與演算法 <a href="https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=902%2010750&amp;class=01&amp;dpt_code=9020&amp;ser_no=18718&amp;semester=111-2&amp;lang=CH"><code>&lt;林軒田 老師&gt;</code></a></span></li></ul></details></li></ul></blockquote></div><div id="6efa7d8c-ce02-417c-913d-78c740caf53a" style="width:43.75000000000001%" class="column"><blockquote id="758ee673-ae47-432f-85cd-fd125cc5e0ef" class="">Course(OpenCourseWare)<ul id="a46d832c-6bad-4818-8e3f-f1f39fb96759" class="toggle"><li><details open=""><summary>OCW</summary><ul id="cd18aaca-3f51-4856-ae5d-cb59e36b02cf" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">HTML+CSS <a href="https://www.udemy.com/course/html5-css3-z/"><code>&lt;Udemy Wilson Ren 老師&gt;</code></a></span></li></ul><ul id="faff44a9-71d3-47b1-b346-51fcc0b88570" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">計算機結構 <a href="https://www.youtube.com/playlist?list=PLS0SUwlYe8czszh6M74JCU0mIUL_ymBbe"><code>&lt;清大 黃婷婷 老師&gt;</code></a></span></li></ul><ul id="0f6b2dc6-957e-49d2-90f2-ee94067d15b2" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">程式設計(ㄧ) <a href="https://www.youtube.com/watch?v=YDCJ39Z-aSQ&amp;list=PLBoiH9x2FdcPLZBsjwkpfCmmtBA-9wk3A"><code>&lt;師大 紀博文 老師&gt;</code></a></span></li></ul><ul id="7495f505-b893-4cd0-90a6-1c40848811e0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">作業系統 <a href="http://debussy.im.nuu.edu.tw/sjchen/OS_Final.html"><code>&lt;聯大 陳士杰 老師&gt;</code></a></span></li></ul><p id="17e1eddb-f32e-471c-9156-f1a18a672c5b" class="">
+</p></details></li></ul></blockquote><p id="f30d97f8-2a1e-4efc-aa1d-3e3b1f048437" class="">
+</p></div><div id="7df4eb0c-a8db-492a-9b54-28a4af7114e8" style="width:3.125%" class="column"><p id="3be21237-1790-4017-862c-4b146c85cf2a" class="">
+</p></div></div><hr id="798bc307-613b-43fd-9a3c-25297d04b15c"/><h1 id="41966f4e-d7a3-476d-bd2e-b4f4b2e190f0" class=""># <span style="border-bottom:0.05em solid">Campus Activities</span></h1><figure id="3192ae08-bb47-4050-a41a-46ed80bf2dc3" class="image" style="text-align:center"><a href="Batch#21%20c1d7dcd5f2c842148d9e99e95acf0de3/Untitled%201.png"><img style="width:864px" src="./src/pic1.png"/></a></figure><hr id="5f5129b3-3bbb-459e-b2f4-c962005f6a46"/><h1 id="6f33aa29-27a5-4f5b-bd81-909db5306218" class=""># <span style="border-bottom:0.05em solid"><strong>Motivation</strong></span></h1><p id="900f0d0e-bc34-4ff8-a993-17726e1f8954" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="72f28793-9686-4b87-8287-7301c12a20f7"><div style="font-size:1.5em"><span class="icon">👁️</span></div><div style="width:100%"><code><strong>Why School?</strong></code> <p id="3ee917f9-b209-483e-ae13-48219b583ca3" class="">* 申請動機：</p><p id="4e42fee5-316b-45c5-8f4c-a8bcba9982f8" class=""><strong>(1) </strong><span style="border-bottom:0.05em solid"><strong>方向規劃</strong></span><strong>:</strong><div class="indented"><p id="c0d31101-c653-480b-9cfc-d0810ebc98cd" class="">  School吸引我的地方在於系統性的條列所需要的進度。在申請表單的<a href="https://drive.google.com/file/d/1L5HdJZEbspR_YI547LB5SXO61bwwTcXx/view"><mark class="highlight-red"><strong>課程大綱</strong></mark></a>上就能有很明確的學習方向，包括若想要成為一個後端工程師所需要的學習路線。對於資訊發達的今日雖然網路上能夠找到各式各樣豐富的資源，但也是因為過多的資訊容易讓初學者無所適從，以至於很容易會有太多的學習目標，但實際應用上與需求不符合的問題。而School的課程規劃對於初入叢林的冒險者來說是很重要的路線指引，並且因為School與企業的合作，能夠知道業界所欠缺的需要什麼樣技能的人才，較能避免產學之間的斷層。</p></div></p><p id="4198a8b1-8d93-4fa1-b053-d35471c75697" class=""><strong>(2) </strong><span style="border-bottom:0.05em solid"><strong>17週駐點集訓</strong></span><strong>:</strong><div class="indented"><p id="3c298e0f-8436-45f2-a63d-f8dca818fa46" class="">  在自學的過程當中，一直以來都是獨自學習並獨立解決問題，比較少有能夠有團隊分工的經驗。而School中有17週與戰友們同處一個空間共同進步的機會，對我來說是很嚮往的學習氛圍。一個人走的比較快，一群人走的比較遠，相信在這個領域中要想走的長遠，團隊合作與適當的良性競爭是快速進步不可或缺的一大條件，若能夠進入這樣的環境學習我想將會是如魚得水的經驗。</p></div></p><p id="762022d3-39b1-42ed-b63c-184e84e8c7e2" class=""><strong>(3) </strong><span style="border-bottom:0.05em solid"><strong>個人專案與合作專案</strong></span><strong>:</strong><div class="indented"><p id="3ca5c1d7-3c04-4bbd-b21b-64ca77aac924" class="">  Side Project是對於個人能力很重要的一個證明，很多類型的Coding Bootcamp可能更著重於小團隊產出的共同專案。然而School的自主個人專案作為作品集的累積將會是在未來就業展現優勢的一個地方，自己也能夠在建置專案的過程中更容易審視所不足的地方。</p><p id="b2512d7e-eeeb-49bd-ac17-9e6a25f6e903" class="">而合作專案更是對未來就業實際情況的一個前哨體驗，在過去學習的過程中一直以來我都是一個人在解決問題，但我深知在未來職場上是以團隊合作為開發基礎。因此我很期待在與其他學員合作的過程中來學習不論是團隊溝通、分工，以及對於專案版本控制等重要環節。</p><p id="2ec27fb4-7561-451c-af88-72985b97ca0c" class="">並且我也很期待與不同學員合作間產生的火花，我想這些都會成為往後職涯中的一大養分，能夠對團隊合作有更早一步的適應。這樣以人為主，非單打獨鬥的學習是我嚮往進入School的最大的動機。</p></div></p></div></figure><p id="310c5770-e485-4b53-bb0b-616c31de7f53" class="">
+</p><p id="f76a60f7-ce2c-40c9-b98b-f765513ae9e3" class="">
+</p><p id="fc0a4fe0-80f6-454b-8ebe-812e6a37ae1d" class="">
+</p><hr id="244d196b-4065-42ea-b1d6-64f170cfcea9"/><h1 id="8daae180-0df6-4b58-a18b-0744e2a028a3" class=""># <span style="border-bottom:0.05em solid">Short-term Planning</span></h1><p id="14e6beee-d623-4465-a85e-259a40d605b6" class="">
+</p><table id="e927544c-8748-45b6-8d9c-7957858bfe27" class="simple-table"><thead class="simple-table-header"><tr id="b1c323bd-7cf4-4e79-8409-b976ff14ae1c"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px">2023-短期計畫</th><th id="Xx]&lt;" class="simple-table-header-color simple-table-header" style="width:281.498291015625px">課程</th><th id="NBfF" class="simple-table-header-color simple-table-header" style="width:213.48614501953125px">授課老師</th><th id="e]I@" class="simple-table-header-color simple-table-header" style="width:578.4930725097656px">備註</th></tr></thead><tbody><tr id="9d24ba53-4633-4279-b5bd-8bade113e2d1"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px">1-2月</th><td id="Xx]&lt;" class="" style="width:281.498291015625px">JavaScript</td><td id="NBfF" class="" style="width:213.48614501953125px">Udemy Wilson Ren 老師</td><td id="e]I@" class="" style="width:578.4930725097656px">前後端必修語言。</td></tr><tr id="c0a2430f-9e31-4bf6-af47-48357406bb96"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px"></th><td id="Xx]&lt;" class="" style="width:281.498291015625px">作業系統</td><td id="NBfF" class="" style="width:213.48614501953125px">聯大OCW 陳士杰 老師 </td><td id="e]I@" class="" style="width:578.4930725097656px">已學習計算機結構上Memory與Processor的基礎運行原理，接著需要了解Process與Thread的相關知識，對於往後後端開發上也是重要的基礎！</td></tr><tr id="27f622c7-95cb-490a-a1a2-41b615d6ee3b"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px">3-6月</th><td id="Xx]&lt;" class="" style="width:281.498291015625px">資料結構與演算法</td><td id="NBfF" class="" style="width:213.48614501953125px">林軒田 老師</td><td id="e]I@" class="" style="width:578.4930725097656px">校內課程。過去有旁聽過電機系開設的資料結構，但其主要以理論為主。因此這學期修習資工系的DSA較著重在Coding的訓練。而DSA這門課對於往後在不論哪個資訊領域都是很重要的基礎，希望能順利通關&gt;&lt;！</td></tr><tr id="12af1332-4cca-41b2-87e5-11dbab07cd3c"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px"></th><td id="Xx]&lt;" class="" style="width:281.498291015625px">Python程式設計</td><td id="NBfF" class="" style="width:213.48614501953125px">張傑帆 老師</td><td id="e]I@" class="" style="width:578.4930725097656px">校內課程。因為已學過C/C++這類型的編譯語言。因此想要趁在學最後的期間多學一門直譯語言，並且Python與Django框架也可作為在後端開發上的一門工具。</td></tr><tr id="e5e22d40-211a-441e-9d3f-0834772cae29"><th id="pHy:" class="simple-table-header-color simple-table-header" style="width:130.49307250976562px">7-11月</th><td id="Xx]&lt;" class="" style="width:281.498291015625px">School?</td><td id="NBfF" class="" style="width:213.48614501953125px"></td><td id="e]I@" class="" style="width:578.4930725097656px">TBD</td></tr></tbody></table><hr id="c0ef968e-f345-461c-ac92-9c1d91a9a7d5"/><h1 id="10be3618-04d2-48dd-ad3f-0520f754d002" class=""># <span style="border-bottom:0.05em solid"><strong>Batch #21 Application</strong></span></h1><p id="80b39224-7e0c-49a6-887c-7f767836b2e1" class="">
+</p><blockquote id="237b7128-fc78-4638-908e-fbeb72a8e5dc" class="">✏️✏️✏️<figure id="29671694-5ecd-4dd4-a68a-523eeed292e3" class="link-to-page"><a href="https://www.notion.so/21-296716945ecd4dd4a68a523eeed292e3">#21 中文版 申請表單 </a></figure><figure id="e073d4e9-228f-465a-99c0-5f1e85b1c7bd" class="link-to-page"><a href="https://www.notion.so/21-Application-English-version-e073d4e9228f465a99c05f1e85b1c7bd">#21 Application English version</a></figure></blockquote></div></article></body></html>
